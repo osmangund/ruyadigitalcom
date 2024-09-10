@@ -1,21 +1,15 @@
 ---
-import BaseLayout from "src/layouts/BaseLayout.astro";
-import client from "@data/client.json";
-import Landing from "@components/Landing.astro";
-
+import BaseLayout from "src/layouts/BaseLayout.astro"
+import client from "@data/client.json"
+import Landing from "@components/Landing.astro"
 ---
 
-<BaseLayout
-  title="Contact"
-  description="Meta description for the page"
->
+<BaseLayout title="Contact" description="Meta description for the page">
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
-  <Landing 
-    title="Contact"
-  />
+  <Landing title="Contact" />
 
   <!-- ============================================ -->
   <!--                Contact Form                  -->
@@ -147,7 +141,7 @@ import Landing from "@components/Landing.astro";
     }
 
     #cs-contact {
-      font-family: "Roboto", "Arial", sans-serif;
+      font-family: "Montserrat", "system-ui", sans-serif;
       padding: var(--sectionPadding);
 
       .cs-container {

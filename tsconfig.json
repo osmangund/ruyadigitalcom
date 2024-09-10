@@ -1,18 +1,29 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "strictNullChecks": true, // necessary for Astro content collections
-    "checkJs": false, // set to true if you want strict checks on your .js files 
+    "strictNullChecks": true,
+    "checkJs": false,
     "baseUrl": ".",
-    // creates shortcuts for imports
     "paths": {
-      "@assets/*":["src/assets/*"],
-      "@data/*": ["src/data/*"],
-      "@styles/*": ["src/styles/*"],
-      "@components/*": ["src/components/*"],
-      "@libs/*": ["src/libs/*"]
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@libs/*": [
+        "src/libs/*"
+      ]
     },
     "incremental": true,
-		"skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
