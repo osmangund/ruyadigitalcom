@@ -1,78 +1,21 @@
 ---
 import BaseLayout from "src/layouts/BaseLayout.astro"
-import { R, U, Y, A } from "@components/Letters"
+import { Letters } from "@components/Letters"
 import Button from "@components/Button"
 import Seal from "@components/Seal"
 import Service, { services } from "@components/Service"
 import Logo from "@components/Logo"
 import Cal from "@components/Cal.astro"
-import { SparklesCore } from "@components/ui/sparkles.jsx"
+import { AuroraBackground } from "@components/ui/AuroraBackground.jsx"
+
+import Hero from "@components/sections/Hero"
+import Services from "@components/sections/Services"
 ---
 
 <BaseLayout title="Ruya Digital" description="Meta description for the page">
-  <header
-    class="fixed left-0 right-0 px-sectionPaddingX py-8 flex justify-between z-10 bg-black"
-  >
-    <a id="header-logo" class="relative h-10" href="/">
-      <img
-        src="/assets/logos/logo-white.png"
-        alt="Logo"
-        class="h-full w-full object-fit"
-      />
-    </a>
-    <div class="flex items-center gap-8">
-      <ul class="nav-ul">
-        <li class="">
-          <a href="/hakkimizda">Hakkımızda</a>
-        </li>
-        <li>
-          <a href="/hizmetlerimiz">Hizmetlerimiz</a>
-        </li>
-        <li>
-          <a href="/blog">Blog</a>
-        </li>
-      </ul>
-      <Button />
-    </div>
-  </header>
+  <Hero client:load />
 
-  <section
-    id="hero"
-    class="min-h-screen flex-col p-sectionPadding gap-5 justify-center items-center bg-black flex"
-  >
-    <div id="logo-letters" class="flex">
-      <div class=""><R client:load /></div>
-      <div class="ml-12"><U /></div>
-      <div class="ml-12"><Y /></div>
-      <div class="ml-0"><A /></div>
-    </div>
-    <!-- Sparkles Animation -->
-    <div class="absolute" aria-hidden>
-      <!-- <SparklesCore particleColor="#ebebeb" background="transparent" client:load /> -->
-    </div>
-    <h1
-      class="text-white uppercase text-4xl tracking-[8px] md:text-4xl lg:text-5xl text-center font-clash"
-    >
-      Dijital Pazarlama Ajansı
-    </h1>
-    <p
-      class="text-white font-light tracking-[1px] text-center md:text-lg lg:text-xl"
-    >
-      Gelece<span class='font-base"'>ğ</span>in pazarlama yöntemleriyle
-      markanızın dijital kimliğini geliştirirken, <br />hedef kitlenize
-      ulaşmanızı sağlıyoruz.
-    </p>
-  </section>
-
-  <section id="services" class="p-sectionPadding min-h-screen bg-black">
-    <div class="flex justify-between mb-40">
-      <h2 class="uppercase text-[96px] font-clash font-bold">Hizmetlerimiz</h2>
-      <Seal />
-    </div>
-    <ul id="servicesList" class="flex flex-col gap-20">
-      {services?.map((service, i) => <Service {...service} i={i} />)}
-    </ul>
-  </section>
+  <Services client:load />
 
   <section
     id="information"
@@ -89,15 +32,13 @@ import { SparklesCore } from "@components/ui/sparkles.jsx"
         <Seal />
       </div>
       <!-- Right Section -->
-      <div
-        class="flex flex-col gap-6 items-start [&>p]:font-clash [&>p]:tracking-wider"
-      >
-        <p class="text-lg md:text-xl">
+      <div class="flex flex-col gap-6 items-start">
+        <p class="text-lg md:text-xl opacity-85">
           Daha fazla insana çözüm sunmanızın tutkusuyla; sizin için dijital
           dünyada sağlam bir varlık oluşturuyor, etkili satış stratejilerimizle
           markanızı hedef kitlenizin önüne çıkartıyoruz.
         </p>
-        <p class="md:text-lg font-light">
+        <p class="md:text-lg font-light opacity-75">
           Sosyal medya ve web dünyasında başarılı olmak, yalnızca var olmak
           değil, fark yaratmaktan geçer. Markanızın hikayesini doğru strateji ve
           etkili içeriklerle yazıyor, dijital varlığınızı anlamlı bir hale

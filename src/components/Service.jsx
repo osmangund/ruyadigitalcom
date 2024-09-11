@@ -1,5 +1,7 @@
 import Logo from "@components/Logo"
 import Button from "./Button"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 export const services = [
   {
@@ -24,10 +26,28 @@ export const services = [
   },
 ]
 
-export default function Service({ title, description, values, i }) {
+export default function Service({
+  title,
+  description,
+  values,
+  i,
+  globalProgress,
+  servicesRange,
+}) {
   i += 1
+
+  const targetRef = useRef(null)
+
+  const scrollYProgress = globalProgress,
+    range = servicesRange
+
+  const CARD_SCALE = useTransform(globalProgress, range, [1, 0])
   return (
-    <li class="relative px-12 py-8 md:px-32 md:py-12 md:pb-8 flex flex-col gap-16 bg-[#1a1a1a] rounded-default drop-shadow-service">
+    <motion.li
+      key={`srvc__${i}`}
+      class="px-12 py-8 md:px-32 md:py-12 md:pb-8 flex flex-col gap-16 bg-[#1a1a1a] rounded-default drop-shadow-service sticky top-[15vh]"
+      style={{ scale: CARD_SCALE }}
+    >
       {/* Top Section */}
       <div class="font-clash">
         <spa class="font-clash text-3xl opacity-40">(0{i})</spa>
@@ -56,6 +76,6 @@ export default function Service({ title, description, values, i }) {
       </div>
       {/* Right Section (Image) */}
       <div class="w-[55%]"></div>
-    </li>
+    </motion.li>
   )
 }

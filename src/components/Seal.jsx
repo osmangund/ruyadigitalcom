@@ -1,9 +1,9 @@
-import { R } from "@components/Letters";
+import { Letters } from "@components/Letters";
 
 export default function Seal() {
   return (
     <div class="relative w-[164px] h-[164px] mt-24 shadow-circle rounded-full overflow-hidden flex justify-center items-center">
-      <R color="var(--primary)" />
+      <Letters letter="R" color="var(--primary)" />
       {/* <img
           src="/assets/misc/curve-text.png"
           alt="Curve"

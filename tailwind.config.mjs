@@ -1,13 +1,29 @@
+import plugin from "tailwindcss"
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette.js"
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      animation: {
+        aurora: "aurora 60s linear infinite",
+        "spin-slow": "spin 10s linear infinite",
+        opacityAndTranslateY: "opacityAndTranslateY 0.5s ease-in-out",
+      },
+      keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+      },
       colors: {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
-        // background: "var(--background)",
-        // text: "var(--text)",
       },
       dropShadow: {
         service: "3px 4px 12px rgba(154, 152, 205, 0.25)",
@@ -34,10 +50,35 @@ export default {
       fontFamily: {
         "--clash": ["Clash Display", "sans-serif"],
       },
-      animation: {
-        "spin-slow": "spin 10s linear infinite",
-      },
     },
   },
-  plugins: [],
+  plugins: [
+    addVariablesForColors,
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": value,
+            }
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        }
+      )
+    }),
+  ],
+}
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  )
+
+  addBase({
+    ":root": newVars,
+  })
 }

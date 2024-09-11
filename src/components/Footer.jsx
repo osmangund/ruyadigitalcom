@@ -1,4 +1,4 @@
-import { R, U, Y, A } from "@components/Letters"
+import { Letters } from "@components/Letters"
 
 export default function Footer() {
   return (
@@ -50,15 +50,15 @@ export default function Footer() {
       </div>
       <div
         id="logo-letters"
-        class="flex relative h-[200px] overflow-hidden opacity-85"
+        class="flex relative h-[200px] overflow-hidden opacity-80 justify-center"
       >
         <div class="flex gap-16">
-          <R />
-          <U />
-          <Y />
+          <Letters letter="R" />
+          <Letters letter="U" />
+          <Letters letter="Y" />
         </div>
         <div>
-          <A />
+          <Letters letter="A" />
         </div>
       </div>
     </footer>
