@@ -52,50 +52,53 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="hero" class="relative min-h-[200vh]" ref={targetRef}>
+    <section id="hero" className="relative min-h-[200vh]" ref={targetRef}>
       {/* Wrapper for parallax effect */}
-      <div class="sticky top-0 h-screen flex justify-center">
+      <div className="sticky top-0 h-screen flex justify-center">
         {/* <!-- Sparkles Animation --> */}
-        <div class="absolute inset-0 opacity-45 overflow-hidden" aria-hidden>
+        <div
+          className="absolute inset-0 opacity-45 overflow-hidden"
+          aria-hidden
+        >
           {/* <!-- <SparklesCore particleColor="#ebebeb" background="transparent" client:load /> --> */}
           <AuroraBackground />
         </div>
         <motion.div
-          class="content flex-col md:p-sectionPadding gap-5 justify-center items-center flex relative"
+          className="content flex-col md:p-sectionPadding gap-5 justify-center items-center flex relative"
           ref={scope}
           style={{ scale, opacity }}
         >
           <div
             id="target0"
-            class="flex [&>div]:relative opacity-0 [&>div]:w-24 md:[&>div]:w-auto"
+            className="flex [&>div]:relative opacity-0 [&>div]:w-24 md:[&>div]:w-auto"
           >
             <div id="target1">
               <Letters letter="R" />
             </div>
-            <div class="md:ml-12" id="target2">
+            <div className="md:ml-12" id="target2">
               <Letters letter="U" />
             </div>
-            <div class="md:ml-12" id="target3">
+            <div className="md:ml-12" id="target3">
               <Letters letter="Y" />
             </div>
-            <div class="md:ml-0" id="target4">
+            <div className="md:ml-0" id="target4">
               <Letters letter="A" />
             </div>
           </div>
           <h1
-            class="text-white uppercase text-xl md:text-4xl tracking-widest md:tracking-[8px] lg:text-5xl text-center font-clash opacity-0"
+            className="text-white uppercase text-xl md:text-4xl tracking-widest md:tracking-[8px] lg:text-5xl text-center font-clash opacity-0"
             id="target5"
           >
             Dijital Pazarlama Ajansı
           </h1>
           <p
-            class="text-white font-light tracking-[1px] text-center text-sm md:text-lg lg:text-xl opacity-0"
+            className="text-white font-light tracking-[1px] text-center text-sm md:text-lg lg:text-xl opacity-0"
             id="target6"
           >
-            Gelece<span class="font-sans">ğ</span>in pazarlama yöntemleriyle
+            Gelece<span className="font-sans">ğ</span>in pazarlama yöntemleriyle
             markanızı hayallerinizdeki seviyeye taşıyoruz. <br />
           </p>
-          <div id="target7" class="block md:hidden opacity-0">
+          <div id="target7" className="block md:hidden opacity-0">
             <Button />
           </div>
         </motion.div>

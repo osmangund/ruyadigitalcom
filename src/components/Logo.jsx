@@ -10,7 +10,7 @@ export default function Logo({
         alt="Logo"
         width={width}
         height={height}
-        class="h-full w-full object-fit"
+        className="h-full w-full object-fit"
       />
     )
   }
@@ -20,7 +20,7 @@ export default function Logo({
       alt="Logo"
       width={width}
       height={height}
-      class="h-full w-full object-fit"
+      className="h-full w-full object-fit"
     />
   )
 }

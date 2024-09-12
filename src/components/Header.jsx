@@ -6,7 +6,7 @@ import { heroToHeaderAnimationDelay } from "./sections/Hero"
 export default function Header() {
   return (
     <motion.header
-      class="absolute top-0 left-0 right-0 px-4 md:px-sectionPaddingX py-4 md:py-8 flex justify-between z-20 bg-bg backdrop-blur-xl bg-black/5 transition-all"
+      className="absolute top-0 left-0 right-0 px-4 md:px-sectionPaddingX py-4 md:py-8 flex justify-between z-20 bg-bg backdrop-blur-xl bg-black/5 transition-all"
       initial={{ opacity: 0, translateY: -100 }}
       animate={{ opacity: 1, translateY: 0 }}
       transition={{
@@ -17,16 +17,16 @@ export default function Header() {
       }}
       viewport={{ once: true }}
     >
-      <a id="header-logo" class="relative h-10" href="/">
+      <a id="header-logo" className="relative h-10" href="/">
         <img
           src="/assets/logos/logo-white.png"
           alt="Logo"
-          class="h-full w-full object-fit"
+          className="h-full w-full object-fit"
         />
       </a>
-      <div class="flex items-center gap-2 md:gap-8">
-        <ul class="nav-ul">
-          <li class="">
+      <div className="flex items-center gap-2 md:gap-8">
+        <ul className="nav-ul">
+          <li className="">
             <a href="/#iletisim">Hakkımızda</a>
           </li>
           <li>
@@ -36,7 +36,7 @@ export default function Header() {
             <a href="/#iletisim">Blog</a>
           </li>
         </ul>
-        <div class="hidden md:block">
+        <div className="hidden md:block">
           <Button />
         </div>
       </div>

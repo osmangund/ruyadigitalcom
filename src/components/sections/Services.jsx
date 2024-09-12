@@ -53,19 +53,24 @@ export default function Services() {
   return (
     <section
       id="services"
-      class="relative min-h-[200vh] p-sectionPadding bg-black -mt-[60vh]"
+      className="relative min-h-[200vh] p-sectionPadding bg-black -mt-[60vh]"
       ref={targetRef}
     >
       <motion.div
-        class="flex justify-between mb-56 h-[30vh] sticky top-[30vh]"
+        className="flex justify-between mb-56 h-[30vh] sticky top-[30vh]"
         style={{ scale: titleScale, y: titleY, opacity: titleOpacity }}
       >
-        <h2 class="uppercase text-8xl font-clash font-bold">Hizmetlerimiz</h2>
-        <div class="absolute right-[5%]">
+        <h2 className="uppercase text-8xl font-clash font-bold">
+          Hizmetlerimiz
+        </h2>
+        <div className="absolute right-[5%]">
           <Seal color="var(--primary)" />
         </div>
       </motion.div>
-      <ul id="servicesList" class="flex flex-col gap-8 md:gap-32 min-h-screen">
+      <ul
+        id="servicesList"
+        className="flex flex-col gap-8 md:gap-32 min-h-screen"
+      >
         {services?.map((service, i) => (
           <Fragment key={`srvc__${i}`}>
             <Service

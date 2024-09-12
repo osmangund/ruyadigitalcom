@@ -75,23 +75,23 @@ export function Letters(props) {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       width={width}
       height={height}
       zoomAndPan="magnify"
       viewBox="0 0 217.5 289.500005"
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
-      class="w-full h-full"
+      className="w-full h-full"
     >
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#fff" />
-          <stop offset="95%" stop-color="#fff" />
-          <stop offset="100%" stop-color="#000" />
+          <stop offset="0%" stopColor="#fff" />
+          <stop offset="95%" stopColor="#fff" />
+          <stop offset="100%" stopColor="#000" />
         </linearGradient>
       </defs>
-      <g fill={color} fill-opacity="1">
+      <g fill={color} fillOpacity="1">
         {letterPath}
       </g>
     </motion.svg>
