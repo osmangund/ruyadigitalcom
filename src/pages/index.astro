@@ -3,36 +3,73 @@ import BaseLayout from "src/layouts/BaseLayout.astro"
 import { Letters } from "@components/Letters"
 import Button from "@components/Button"
 import Seal from "@components/Seal"
-import Service, { services } from "@components/Service"
 import Logo from "@components/Logo"
 import Cal from "@components/Cal.astro"
-import { AuroraBackground } from "@components/ui/AuroraBackground.jsx"
 
 import Hero from "@components/sections/Hero"
+import ServicesMinimal from "@components/sections/ServicesMinimal.astro"
 import Services from "@components/sections/Services"
 ---
 
 <BaseLayout title="Ruya Digital" description="Meta description for the page">
   <Hero client:load />
 
-  <Services client:load />
+  <section
+    id="information"
+    class="p-sectionPadding flex flex-col gap-16 bg-black -mt-[60vh] z-10 relative"
+  >
+    <!-- Heading -->
+    <h2
+      class="uppercase text-xl md:text-6xl font-clash font-bold tracking-h2 rainbow-text"
+    >
+      Dijital potansiyeliniz<br />
+      Rüya gibi <span class="underline">sonuçlar</span>
+      <br />getirecek.
+    </h2>
+    <div class="flex justify-between [&>div]:flex-1">
+      <!-- Left Section -->
+      <div class="flex items-center justify-start -translate-y-1/4 opacity-95">
+        <Seal />
+      </div>
+      <!-- Right Section -->
+      <div class="flex flex-col gap-6 items-start">
+        <p class="text-lg md:text-xl opacity-85">
+          Eski nesil ajansların hatalarını biliyoruz. Uzun ve yorucu süreçlere
+          gerek yok. Ruya Digital, kısa ve etkili bir görüşme ile ihtiyacınızı
+          belirler, çözüm üretir ve sonuç sunar.
+        </p>
+        <p class="md:text-lg font-light opacity-75">
+          Her çözümümüz, size gerçek değer katıp gelirlerinizi artırmak için
+          tasarlandı. Sonuç vermeyi ve kazancınızı artırmayı seviyoruz.
+          Kazandıkça büyümenizi ve her geçen gün daha büyük başarılar elde
+          etmenizi sağlıyoruz.
+        </p>
+        <Button />
+      </div>
+    </div>
+  </section>
+
+  <!-- <Services client:load /> -->
+
+  <ServicesMinimal />
 
   <section
     id="information"
-    class="p-sectionPadding flex flex-col gap-16 bg-black"
+    class="p-sectionPadding flex flex-col items-center gap-16 bg-black"
   >
+    <Seal />
     <!-- Heading -->
-    <h2 class="uppercase text-xl md:text-6xl font-clash font-bold tracking-h2">
+    <h2
+      class="uppercase text-xl md:text-6xl font-clash font-bold tracking-h2 black-to-white-gradient-text text-center"
+    >
       Hedef odaklı stratejiler.<br />
       Etkileyici markalar.
     </h2>
     <div class="flex justify-between [&>div]:flex-1">
       <!-- Left Section -->
-      <div class="flex items-center justify-start -translate-y-1/4">
-        <Seal />
-      </div>
+
       <!-- Right Section -->
-      <div class="flex flex-col gap-6 items-start">
+      <div class="flex flex-col gap-6 items-center max-w-screen-lg text-center">
         <p class="text-lg md:text-xl opacity-85">
           Daha fazla insana çözüm sunmanızın tutkusuyla; sizin için dijital
           dünyada sağlam bir varlık oluşturuyor, etkili satış stratejilerimizle
@@ -40,17 +77,17 @@ import Services from "@components/sections/Services"
         </p>
         <p class="md:text-lg font-light opacity-75">
           Sosyal medya ve web dünyasında başarılı olmak, yalnızca var olmak
-          değil, fark yaratmaktan geçer. Markanızın hikayesini doğru strateji ve
-          etkili içeriklerle yazıyor, dijital varlığınızı anlamlı bir hale
-          getiriyoruz. Güçlü, kalıcı ve etkileyici bir marka yaratmak için
-          buradayız.
+          değil, fark yaratmaktan geçer. 
         </p>
         <Button />
       </div>
     </div>
   </section>
 
-  <section id="contact" class="min-h-screen bg-black p-sectionPadding">
+  <section
+    id="iletisim"
+    class="min-h-screen bg-black p-sectionPadding -scroll-my-sectionPaddingY"
+  >
     <div
       class="relative border-[0.5px] border-white border-opacity-25 md:min-h-[800px] flex flex-col justify-center items-center rounded-default"
     >
@@ -61,7 +98,7 @@ import Services from "@components/sections/Services"
         Ücretsiz Keşif Toplantısı
       </h2>
       <!-- Cal (Book Appointment) -->
-      <!-- <Cal client:load /> -->
+      <Cal />
     </div>
   </section>
 </BaseLayout>

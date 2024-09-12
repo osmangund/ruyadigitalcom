@@ -2,7 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import client from "@data/client.json";
 import Footer from "@components/Footer";
-import Header from "@components/Header.astro";
+import Header from "@components/Header";
 import "@styles/root.less";
 // import "@styles/dark.less";
 
@@ -81,7 +81,7 @@ const {description, title} = Astro.props;
             <!--Screen reader skip main nav-->
             <a class="skip" aria-label="Ana içeriğe geçmek için tıkla" href="#main">Ana içeriğe geçmek için tıkla</a>
     
-             <Header />
+             <Header client:load />
             <main id="main">
                 <slot/>
             </main>

@@ -42,6 +42,9 @@ export default {
       borderRadius: {
         default: "var(--borderRadius)",
       },
+      scrollMargin: {
+        sectionPaddingY: "var(--sectionPaddingY)",
+      },
       padding: {
         sectionPadding: "var(--sectionPadding)",
         sectionPaddingX: "var(--sectionPaddingX)",

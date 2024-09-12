@@ -9,18 +9,18 @@ export default function Footer() {
             <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
           </li>
           <li>
-            <a href="/gizlilik-politikasi">Kullanma Koşulları</a>
+            <a href="/kullanma-kosullari">Kullanma Koşulları</a>
           </li>
         </ul>
         <ul class="nav-ul !gap-3">
           <li>
-            <a href="/hakkimizda">Hakkımızda</a>
+            <a href="/#iletisim">Hakkımızda</a>
           </li>
           <li>
-            <a href="/hizmetlerimiz">Hizmetlerimiz</a>
+            <a href="/#hizmetlerimiz">Hizmetlerimiz</a>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <a href="/#iletisim">Blog</a>
           </li>
         </ul>
         <ul class="nav-ul !gap-0.5 flex-col">

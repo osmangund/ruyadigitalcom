@@ -1,13 +1,21 @@
 import Button from "@components/Button"
 import { Letters } from "@components/Letters"
 import { AuroraBackground } from "@components/ui/AuroraBackground"
-import { easeIn, easeInOut, easeOut, motion, useAnimate, useScroll, useTransform } from "framer-motion"
+import {
+  easeIn,
+  easeInOut,
+  easeOut,
+  motion,
+  useAnimate,
+  useScroll,
+  useTransform,
+} from "framer-motion"
 import { useEffect, useRef } from "react"
 
 const duration = 0.75,
   ease = "easeIn",
   delay = 0.5,
-  animation = { opacity: 0.9 }
+  animation = { opacity: 0.85 }
 
 export const heroToHeaderAnimationDelay = delay
 
@@ -19,8 +27,8 @@ export default function Hero() {
     target: targetRef,
     offset: ["start start", "end -20%"],
   })
-  const opacity = useTransform(scrollYProgress, [0.15, 0.85], [1, 0])
-  const scale = useTransform(scrollYProgress, [0.15, 1], [1, 0.4], {
+  const opacity = useTransform(scrollYProgress, [0.15, 0.45], [1, 0])
+  const scale = useTransform(scrollYProgress, [0.15, 0.9], [1, 0.2], {
     ease: easeInOut,
   })
 

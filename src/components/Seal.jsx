@@ -1,9 +1,11 @@
-import { Letters } from "@components/Letters";
+import { Letters } from "@components/Letters"
 
-export default function Seal() {
+export default function Seal({ color = "#fff", width = "164", height = "164" }) {
   return (
-    <div class="relative w-[164px] h-[164px] mt-24 shadow-circle rounded-full overflow-hidden flex justify-center items-center">
-      <Letters letter="R" color="var(--primary)" />
+    <div
+      class={`relative w-[${width}px] h-[${height}px] mt-24 shadow-circle rounded-full overflow-hidden flex justify-center items-center`}
+    >
+      <Letters letter="R" color={color} width={width} height={height} />
       {/* <img
           src="/assets/misc/curve-text.png"
           alt="Curve"

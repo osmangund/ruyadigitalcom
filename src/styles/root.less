@@ -9,6 +9,7 @@
   // Website colors
   :root {
     --primary: hsl(242, 35%, 70%);
+    --primary: hsl(264, 96%, 64%);
     --primaryLight: hsl(242, 35%, 85%);
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -24,8 +25,10 @@
 
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 120px;
-    --sectionPaddingX: clamp(3.75rem, 7.82vw, 6.25rem);
-    --sectionPaddingY: 16px;
+    // 30px - 50px top and bottom
+    --sectionPadding: clamp(1.875rem, 3.91vw, 3.125rem) 120px;
+    --sectionPaddingX: clamp(1.875rem, 3.91vw, 3.125rem);
+    --sectionPaddingY: 120px;
 
     --borderRadius: 30px;
   }
@@ -115,14 +118,38 @@
 @media only screen and (min-width: 0em) {
   // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
-  /* montserrat-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/assets/fonts/montserrat-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+/* montserrat-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/montserrat-v26-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-900 - latin */
+// @font-face {
+//   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: 900;
+//   src: url('/assets/fonts/montserrat-v26-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+// }
 
   // Clash Display Light
   @font-face {
@@ -159,6 +186,7 @@
     padding: 0;
     color: var(--bodyTextColor);
     background-color: black;
+    scroll-behavior: smooth;
   }
 
   *,
@@ -211,6 +239,15 @@
     top: 0;
     left: 0;
     z-index: -1111111;
+  }
+
+  .rainbow-text {
+    color: #7319fa;
+    background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   .nav-ul {

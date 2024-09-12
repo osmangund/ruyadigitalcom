@@ -4,7 +4,7 @@ import { heroToHeaderAnimationDelay } from "@components/sections/Hero"
 ---
 
 <header
-  class="fixed left-0 right-0 px-sectionPaddingX py-8 flex justify-between z-20 bg-bg backdrop-blur-xl bg-black/5 opacity-0"
+  class="fixed left-0 right-0 px-sectionPaddingX py-8 flex justify-between z-20 bg-bg backdrop-blur-xl bg-black/5 opacity-0 transition-all"
   style=`animation: opacityAndTranslateY 1s ease-in-out forwards;animation-delay:${heroToHeaderAnimationDelay}s;-webkit-animation-delay: ${heroToHeaderAnimationDelay}s};`
 >
   <a id="header-logo" class="relative h-10" href="/">
@@ -41,4 +41,38 @@ import { heroToHeaderAnimationDelay } from "@components/sections/Hero"
       transform: translateY(0);
     }
   }
+
+  .hide {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: none !important;
+  }
 </style>
+
+<script>
+  // If more than 100px scrolled, don't show, but if scroll up, show again
+  let prevScrollPos = window.scrollY
+
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header")
+    if (window.scrollY > 100) {
+      if (header) {
+        header.classList.toggle("hide")
+      }
+    } else {
+      if (header) {
+        header.classList.remove("hide")
+      }
+    }
+
+    const currentScrollPos = window.scrollY
+
+    prevScrollPos < currentScrollPos
+      ? header?.classList.add("hide")
+      : header?.classList.remove("hide")
+
+    prevScrollPos = currentScrollPos
+  })
+
+  // return () => window.removeEventListener("scroll", () => {})
+</script>
