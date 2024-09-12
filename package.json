@@ -1,7 +1,7 @@
 {
-  "name": "astro-kit-less",
+  "name": "ruya-digital",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "dev": "npm run astro dev & npx decap-server",
     "start": "astro dev",
