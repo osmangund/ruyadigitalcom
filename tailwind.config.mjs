@@ -23,6 +23,7 @@ export default {
       },
       colors: {
         primary: "var(--primary)",
+        primaryLight: "var(--primaryLight)",
         secondary: "var(--secondary)",
       },
       dropShadow: {
@@ -47,8 +48,11 @@ export default {
       },
       padding: {
         sectionPadding: "var(--sectionPadding)",
+        sectionPaddingMobile: "var(--sectionPaddingMobile)",
         sectionPaddingX: "var(--sectionPaddingX)",
+        sectionPaddingXMobile: "var(--sectionPaddingXMobile)",
         sectionPaddingY: "var(--sectionPaddingY)",
+        sectionPaddingYMobile: "var(--sectionPaddingYMobile)",
       },
       fontFamily: {
         "--clash": ["Clash Display", "sans-serif"],

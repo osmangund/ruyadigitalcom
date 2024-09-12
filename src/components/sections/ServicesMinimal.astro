@@ -1,24 +1,26 @@
 ---
 import Button from "@components/Button"
 import Seal from "@components/Seal"
+import { LampDemo } from "@components/ui/lamp"
 ---
 
 <section
   id="hizmetlerimiz"
-  class="relative min-h-screen p-sectionPadding bg-black"
+  class="relative min-h-screen p-sectionPaddingMobile md:p-sectionPadding bg-black"
 >
   <div class="flex flex-col items-center gap-8">
     <div class="">
-      <Seal width="100" height="100" color="var(--primary)" />
+      <!-- <Seal width={100} height={100} color="var(--primary)" /> -->
     </div>
-    <h2
-      class="uppercase text-2xl md:text-7xl font-clash font-bold mb-4 md:mb-12"
+    <!-- <h2
+      class="uppercase text-[2.5rem] tracking-wider md:text-7xl font-clash font-bold mb-4 md:mb-12"
     >
       Hizmetlerimiz
-    </h2>
+    </h2> -->
   </div>
+  <LampDemo client:load />
   <ul
-    class="relative w-full flex flex-wrap justify-center gap-8 [&>li]:rounded-default [&>li]:w-[calc(50%-16px)] [&>li]:h-[600px] [&>li]:border [&>li]:flex [&>li]:flex-col [&>li]:justify-center [&>li]:items-center [&>li]:gap-8 [&>li]:border-white/20 [&>li]:px-4 [&>li]:md:px-8 [&>li]:py-8 [&>li]:md:py-16 [&>li>h3]:uppercase [&>li>img]:w-full [&>li>img]:h-[40%] [&>li>img]:object-scale-down [&>li>h3]:text-2xl [&>li>h3]:font-bold [&>li>h3]:text-center [&>li>p]:text-center"
+    class="relative w-full flex flex-wrap justify-center gap-8 [&>li]:rounded-default [&>li]:w-full [&>li]:md:w-[calc(50%-16px)] [&>li]:h-[600px] [&>li]:border [&>li]:flex [&>li]:flex-col [&>li]:justify-center [&>li]:items-center [&>li]:gap-8 [&>li]:border-white/20 [&>li]:px-4 [&>li]:md:px-8 [&>li]:py-8 [&>li]:md:py-16 [&>li>h3]:uppercase [&>li>img]:w-full [&>li>img]:h-[40%] [&>li>img]:object-scale-down [&>li>h3]:text-2xl [&>li>h3]:font-bold [&>li>h3]:text-center [&>li>p]:text-center"
   >
     <li>
       <img
@@ -26,7 +28,10 @@ import Seal from "@components/Seal"
         class="brightness-[0.85]"
       />
       <h3>Sosyal Medya Yönetimi</h3>
-      <p></p>
+      <p>
+        Göz alıcı tasarımlar ve ikna edici metinlerle, markanızı
+        müşterilerinizle buluşturacak organik içerikler üretiyoruz.
+      </p>
       <Button />
     </li>
     <li>
@@ -43,8 +48,9 @@ import Seal from "@components/Seal"
       <img src="/assets/images/services/webdesign.png" class="brightness-90" />
       <h3>Web Tasarım</h3>
       <p>
-        WordPress ya da başka bir hazır platform yerine, 100% elle kodlanmış,
-        üstün sonuçları olan websiteleri sunuyoruz.
+        100% elle kodlanmış, her ekrana uygun, 100 Google Skorları olan, dönüşüm
+        odaklı tasarlanmış ve bu sayede üstün sonuçlar getiren websiteleri
+        sunuyoruz.
       </p>
       <Button />
     </li>

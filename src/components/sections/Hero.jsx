@@ -40,7 +40,11 @@ export default function Hero() {
     await animate("#target0", animation, { duration, delay, ease })
     await animate("#target5", animation, { duration: duration - 0.25, ease })
     await animate("#target6", animation, { duration: duration - 0.25, ease })
-    // await animate("#target7", animation, { duration: duration - 0.25, delay, ease })
+    await animate("#target7", animation, {
+      duration: duration - 0.25,
+      delay,
+      ease,
+    })
   }
 
   useEffect(() => {
@@ -57,41 +61,43 @@ export default function Hero() {
           <AuroraBackground />
         </div>
         <motion.div
-          class="content flex-col p-sectionPadding gap-5 justify-center items-center flex relative"
+          class="content flex-col md:p-sectionPadding gap-5 justify-center items-center flex relative"
           ref={scope}
           style={{ scale, opacity }}
         >
-          <div id="target0" class="flex [&>div]:relative opacity-0">
+          <div
+            id="target0"
+            class="flex [&>div]:relative opacity-0 [&>div]:w-24 md:[&>div]:w-auto"
+          >
             <div id="target1">
               <Letters letter="R" />
             </div>
-            <div class="ml-12" id="target2">
+            <div class="md:ml-12" id="target2">
               <Letters letter="U" />
             </div>
-            <div class="ml-12" id="target3">
+            <div class="md:ml-12" id="target3">
               <Letters letter="Y" />
             </div>
-            <div class="ml-0" id="target4">
+            <div class="md:ml-0" id="target4">
               <Letters letter="A" />
             </div>
           </div>
           <h1
-            class="text-white uppercase text-4xl tracking-[8px] md:text-4xl lg:text-5xl text-center font-clash opacity-0"
+            class="text-white uppercase text-xl md:text-4xl tracking-widest md:tracking-[8px] lg:text-5xl text-center font-clash opacity-0"
             id="target5"
           >
             Dijital Pazarlama Ajansı
           </h1>
           <p
-            class="text-white font-light tracking-[1px] text-center md:text-lg lg:text-xl opacity-0"
+            class="text-white font-light tracking-[1px] text-center text-sm md:text-lg lg:text-xl opacity-0"
             id="target6"
           >
-            Gelece<span class='font-base"'>ğ</span>in pazarlama yöntemleriyle
-            markanızın dijital kimliğini geliştirirken, <br />
-            hedef kitlenize ulaşmanızı sağlıyoruz.
+            Gelece<span class="font-sans">ğ</span>in pazarlama yöntemleriyle
+            markanızı hayallerinizdeki seviyeye taşıyoruz. <br />
           </p>
-          {/* <div id="target7" class="opacity-0">
-          <Button />
-        </div> */}
+          <div id="target7" class="block md:hidden opacity-0">
+            <Button />
+          </div>
         </motion.div>
       </div>
     </section>

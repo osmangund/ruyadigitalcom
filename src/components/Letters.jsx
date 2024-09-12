@@ -82,6 +82,7 @@ export function Letters(props) {
       viewBox="0 0 217.5 289.500005"
       preserveAspectRatio="xMidYMid meet"
       version="1.0"
+      class="w-full h-full"
     >
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
