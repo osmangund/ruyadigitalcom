@@ -32,6 +32,14 @@ export default {
       letterSpacing: {
         h2: "2px",
       },
+      width: {
+        seal: "164px",
+        sealMobile: "82px",
+      },
+      height: {
+        seal: "164px",
+        sealMobile: "82px",
+      },
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
         "4xl": [

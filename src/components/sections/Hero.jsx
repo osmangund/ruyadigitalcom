@@ -14,7 +14,7 @@ import { useEffect, useRef } from "react"
 
 const duration = 0.75,
   ease = "easeIn",
-  delay = 0.5,
+  delay = 0.25,
   animation = { opacity: 0.85 }
 
 export const heroToHeaderAnimationDelay = delay
