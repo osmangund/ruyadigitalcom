@@ -81,7 +81,7 @@ export default function Hero() {
             <div className="md:ml-12" id="target3">
               <Letters letter="Y" />
             </div>
-            <div className="md:ml-0" id="target4">
+            <div id="target4">
               <Letters letter="A" />
             </div>
           </div>
