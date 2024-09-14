@@ -21,7 +21,7 @@ export default function Header() {
         <img
           src="/assets/logos/logo-white.png"
           alt="Logo"
-          className="h-full w-full object-fit"
+          className="h-full w-full object-scale-down md:object-fit"
         />
       </a>
       <div className="flex items-center gap-2 md:gap-8">
