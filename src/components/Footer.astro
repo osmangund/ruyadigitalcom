@@ -47,6 +47,18 @@ import { Letters } from "@components/Letters"
           INSTAGRAM.COM/RUYADIGITALCOM
         </a>
       </li>
+      <li>
+        <span class="select-none">
+          <!-- Live time at Turkey -->
+          {
+            new Date().toLocaleString("tr-TR", {
+              timeZone: "Europe/Istanbul",
+              hour: "numeric",
+              minute: "numeric",
+            })
+          } | GMT+3, TR
+        </span>
+      </li>
     </ul>
   </div>
   <div
