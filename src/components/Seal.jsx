@@ -11,7 +11,6 @@ export default function Seal({ color = "#fff" }) {
       `}
     >
       <Letters letter="R" color={color} />
-      {/* <img src="/assets/misc/curve-text.png" alt="Curve" width={196.8} height={196.8} className="absolute inset-0 w-[120%] h-[120%] animate-spin-slow rounded-full" /> */}
     </div>
   )
 }

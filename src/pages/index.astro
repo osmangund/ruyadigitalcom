@@ -1,14 +1,11 @@
 ---
 import BaseLayout from "src/layouts/BaseLayout.astro"
-import { Letters } from "@components/Letters"
 import Button from "@components/Button"
 import Seal from "@components/Seal"
-import Logo from "@components/Logo"
 import Cal from "@components/Cal"
 
 import Hero from "@components/sections/Hero"
-import ServicesMinimal from "@components/sections/ServicesMinimal.astro"
-import Services from "@components/sections/Services"
+import Services from "@components/sections/Services.astro"
 ---
 
 <BaseLayout
@@ -51,9 +48,7 @@ import Services from "@components/sections/Services"
     </div>
   </section>
 
-  <!-- <Services client:load /> -->
-
-  <ServicesMinimal />
+  <Services />
 
   <section
     id="information"
